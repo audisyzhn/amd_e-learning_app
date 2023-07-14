@@ -1,5 +1,3 @@
-import 'package:amik_learn/dashboard.dart';
-import 'package:amik_learn/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
@@ -92,28 +90,26 @@ class _SignInScreenState extends State<SignInScreen> {
                       color: Colors.black,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'Enter your password',
-                      labelText: 'Password',
-                      suffix: IconButton(
-                        color: Colors.black54,
-                        onPressed: () {
-                          //add Icon button at end of TextField
-                          setState(() {
-                            //refresh UI
-                            if (passenable) {
-                              //if passenable == true, make it false
-                              passenable = false;
-                            } else {
-                              passenable =
-                                  true; //if passenable == false, make it true
-                            }
-                          });
-                        },
-                        icon: Icon(passenable == true
-                            ? Icons.remove_red_eye
-                            : Icons.disabled_visible_outlined),
-                      ),
-                    ),
+                        hintText: 'Enter your password',
+                        labelText: 'Password',
+                        suffix: IconButton(
+                            color: Colors.black54,
+                            onPressed: () {
+                              //add Icon button at end of TextField
+                              setState(() {
+                                //refresh UI
+                                if (passenable) {
+                                  //if passenable == true, make it false
+                                  passenable = false;
+                                } else {
+                                  passenable =
+                                      true; //if passenable == false, make it true
+                                }
+                              });
+                            },
+                            icon: Icon(passenable == true
+                                ? Icons.remove_red_eye
+                                : Icons.disabled_visible_outlined))),
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your text';
@@ -125,13 +121,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 30,
                   ),
                   TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomeScreen()),
-                      );
-                    },
+                    onPressed: () {},
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                     ),
